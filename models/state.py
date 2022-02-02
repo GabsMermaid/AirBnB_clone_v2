@@ -28,6 +28,6 @@ class State(BaseModel, Base):
             cls_dict = models.storage.all(City)
 
             for key, value in cls_dict.items():
-                if value.state_id == state_id:
+                if value.state_id == self.id:
                     list_cities.append(value)
             return list_cities
